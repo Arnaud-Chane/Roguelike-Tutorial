@@ -15,7 +15,7 @@ def main():
 
   con = libtcod.console_new(screen_width, screen_height)
 
-  key.libtcod.Key()
+  key = libtcod.Key()
   mouse = libtcod.Mouse()
 
   while not libtcod.console_is_window_closed():
@@ -23,7 +23,7 @@ def main():
 
     libtcod.console_set_default_foreground(con, libtcod.white)
     libtcod.console_put_char(con, player_x, player_y, '@', libtcod.BKGND_NONE)
-    libtcod.console_blit(con, 0, 0, screen_witdh, screen_height, 0, 0, 0)
+    libtcod.console_blit(con, 0, 0, screen_width, screen_height, 0, 0, 0)
     libtcod.console_flush()
 
     
